@@ -59,13 +59,8 @@ public class Segunda_ventana extends Activity
          					Toast.LENGTH_SHORT).show();  
                  else
                  {
-                	 //TODO hay que crear una nueva Ventana informacion. 
-                	/* 
-                	//Creamos el Intent
-                     Intent intent = new Intent(Segunda_ventana.this, Ventana_Informacion.class);
-                     //Iniciamos la nueva actividad
-                     startActivity(intent);   
-                     */                 	 
+                	 Intent intent = new Intent(Segunda_ventana.this, Ventana_Informacion2.class);
+                     startActivity(intent);                    	 
                  }
              }
         });

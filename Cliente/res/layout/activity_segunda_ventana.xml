@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/coge_numero"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="@string/boton_reservar" />
 
     <Button
@@ -25,20 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btn_aceptar1"
         android:layout_below="@+id/ver_turnos"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:text="@string/boton_reservar" />
-
-    <EditText
-        android:id="@+id/enter_tu_numero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tu_numero"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:inputType="number"
-        android:textSize="25sp"
-        android:width="180dp" />
 
     <TextView
         android:id="@+id/ver_turnos"
@@ -46,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_aceptar1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="30dp"
         android:text="@string/boton_ver_turnos"
         android:textColor="#00b9ff"
         android:textSize="25sp" />
@@ -59,17 +47,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/texto_reserva"
         android:textColor="#00b9ff"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/tu_numero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ver_turnos"
-        android:layout_below="@+id/btn_aceptar2"
-        android:layout_marginTop="32dp"
-        android:text="@string/texto_Tu_numero"
-        android:textColor="#00b9ff"
-        android:textSize="25sp" />
+        android:textSize="25sp" 
+        android:layout_marginTop="50dp"/>
 
 </RelativeLayout>

@@ -7,13 +7,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings.Secure;
 import android.widget.TextView;
 
-public class Ventana_Informacion extends Activity 
+public class Ventana_Informacion2 extends Activity 
 {
 	TextView txt_turno, txt_hora_reserva, txt_tipo_gestion, txt_tiempo;
 	JSONObject json;
@@ -23,7 +22,7 @@ public class Ventana_Informacion extends Activity
     protected void onCreate(Bundle savedInstanceState)
 	{    	
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ventana__informacion);
+        setContentView(R.layout.activity_ventana__informacion2);
         
         txt_turno = (TextView) findViewById(R.id.txt_turno);
         txt_hora_reserva = (TextView) findViewById(R.id.txt_hora_reserva);
@@ -33,15 +32,10 @@ public class Ventana_Informacion extends Activity
      // Obtengo la ID del dispositivo móvil:
     	
     	android_ID = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);
-                
-        // Recoge el mensaje del Intent:
-        
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(Ventana_seleccion.EXTRA_MESSAGE);
-        
+                        
         // Llamo al thread que establecerá comunicación con el Servidor:
         
-        new Tarea().execute(message, "id_user", "hora_reserva", "tipo_gestion");
+        new Tarea().execute("id_user", "hora_reserva", "tipo_gestion");
     }
 
 	
@@ -57,14 +51,14 @@ public class Ventana_Informacion extends Activity
     		{
     			// Llamo a la función de la clase Reserva que reservará el turno:
     			
-				json = reserva.reservarTurno(params[0], android_ID);
-				turno = json.getString(params[1]);
-				hora = json.getString(params[2]);
-				gestion = json.getString(params[3]);
+				json = reserva.verTurno(android_ID);
+				turno = json.getString(params[0]);
+				hora = json.getString(params[1]);
+				gestion = json.getString(params[2]);
 				
 				tiempo = reserva.calularTiempo();
 				
-				String []array = {turno,hora,gestion, tiempo};				
+				String []array = {turno, hora, gestion, tiempo};				
 				return array;
 			}     		
     		catch (ClientProtocolException e) 

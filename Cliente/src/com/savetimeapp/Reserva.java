@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Calendar;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -14,6 +15,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import android.widget.Toast;
 
 public class Reserva 
@@ -83,7 +85,7 @@ public class Reserva
 		// Creamos la conexión al PHP reservar.php:
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.35/reserva.php?tiempo="+
+		HttpGet htpget = new HttpGet("http://192.168.1.33/reserva.php?tiempo="+
 		Integer.toString(tiempo)+"&hora_reserva="+hora_reserva+"&tipo_gestion="+tipo_gestion
 		+"&identidad="+identidad);
 			
@@ -115,7 +117,7 @@ public class Reserva
 		identidad = ident;
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.35/borrar.php?&identidad="+identidad);
+		HttpGet htpget = new HttpGet("http://192.168.1.33/borrar.php?&identidad="+identidad);
 		cliente.execute(htpget);	
 	}
 	
@@ -128,7 +130,7 @@ public class Reserva
 		String resultado;
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.35/hay_Turno.php?&identidad="+identidad);
+		HttpGet htpget = new HttpGet("http://192.168.1.33/hay_Turno.php?&identidad="+identidad);
 		
 		HttpResponse respuesta = cliente.execute(htpget);
 		bfr = new BufferedReader(new InputStreamReader(respuesta.getEntity().getContent()));
@@ -155,7 +157,7 @@ public class Reserva
 		String resultado;
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.35/calcular_Tiempo.php");
+		HttpGet htpget = new HttpGet("http://192.168.1.33/calcular_Tiempo.php");
 		
 		HttpResponse respuesta = cliente.execute(htpget);
 		bfr = new BufferedReader(new InputStreamReader(respuesta.getEntity().getContent()));
@@ -169,5 +171,32 @@ public class Reserva
 		resultado = stb.toString();
 				
 		return resultado;
+	}
+	
+	
+	public JSONObject verTurno(String ident) 
+			throws ClientProtocolException, IOException, JSONException
+	{
+		identidad = ident;
+		
+		HttpClient cliente = new DefaultHttpClient();
+		HttpGet htpget = new HttpGet("http://192.168.1.33/ver_Turno.php?identidad="+identidad);
+			
+		HttpResponse r = cliente.execute(htpget);
+		int status = r.getStatusLine().getStatusCode();
+		if (status == 200) // Conexión correcta
+		{
+			HttpEntity e = r.getEntity();
+			String data = EntityUtils.toString(e);
+			JSONArray timeline =  new JSONArray(data);
+			JSONObject last = timeline.getJSONObject(0);
+			return last;			
+		}
+		else
+		{
+			// Este toast creo que no funcionará:
+			Toast.makeText( null, "Error", Toast.LENGTH_SHORT).show();
+			return null;
+		}		
 	}
 }

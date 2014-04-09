@@ -37,7 +37,10 @@
             android:name="com.savetimeapp.Ventana_Informacion"
             android:label="@string/title_activity_ventana__informacion" >
         </activity>
-        
+        <activity
+            android:name="com.savetimeapp.Ventana_Informacion2"
+            android:label="@string/title_activity_ventana__informacion2" >
+        </activity>
     </application>
 
 </manifest>
