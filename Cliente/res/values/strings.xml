@@ -27,13 +27,17 @@
     <string name="title_activity_segunda_ventana">Segunda_ventana</string>
     <string name="texto_reserva">Reservar Turno</string>
     <string name="boton_reservar">Aceptar</string>
-    <string name="boton_ver_turnos">Ver info. reserva</string>
+    <string name="boton_ver_turnos">Ver información de la reserva</string>
     <string name="texto_Tu_numero">Tu número es:</string>
     <string name="title_activity_ventana_seleccion">Ventana_seleccion</string>
-    <string name="txt_Tu_turno">Tu turno:</string>
+    <string name="txt_Tu_turno">Su turno:</string>
     <string name="txt_Datosdelaresrva">Datos de la reserva:</string>
     <string name="txt_Horadelaresrva">Hora de la reserva:</string>
     <string name="txt_Tipogest">Tipo de gestión:</string>
     <string name="title_activity_ventana__informacion2">Ventana_Informacion2</string>
+    <string name="txt_Bienvenido">¡Bienvenido!</string>
+    <string name="txt_elija_opcion">Elija una opción:</string>
+    <string name="ventana_seleccion">Gestión y reserva</string>
+    <string name="ventana_informacion">Información</string>
 
 </resources>

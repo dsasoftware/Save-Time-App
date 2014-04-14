@@ -10,7 +10,7 @@
         android:id="@+id/txt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="15dp"
         android:text="@string/text1_mess"
         android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -20,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="216dp"
         android:layout_marginTop="20dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp" >
 
         <RadioButton
             android:id="@+id/asociacion"
@@ -72,7 +73,7 @@
         android:id="@+id/txt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="15dp"
         android:text="@string/text2_mess"
         android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -81,7 +82,7 @@
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="113dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="20dp"
         android:text="@string/button1_name"
         android:onClick="reservar" />
@@ -90,7 +91,7 @@
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="92dp"
+        android:layout_marginLeft="105dp"
         android:layout_marginTop="10dp"
         android:onClick="borrar"
         android:text="@string/button2_name" />

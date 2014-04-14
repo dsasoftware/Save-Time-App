@@ -2,16 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
+    
     <TextView
         android:id="@+id/tu_numero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="43dp"
         android:text="@string/txt_Tu_turno"
         android:textColor="#00b9ff"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/txt_turno"
@@ -20,16 +21,17 @@
         android:layout_below="@+id/tu_numero"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Número aquí"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp" />
+    
     <TextView
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_turno"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="@string/txt_Datosdelaresrva"
         android:textColor="#00b9ff"
         android:textSize="30sp" />
@@ -44,15 +46,17 @@
         android:text="@string/txt_Horadelaresrva"
         android:textColor="#00b9ff"
         android:textSize="25sp" />
-
+    
     <TextView
         android:id="@+id/txt_hora_reserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView02"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Hora aquí"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_marginTop="24dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/TextView03"
@@ -64,17 +68,18 @@
         android:text="@string/txt_Tipogest"
         android:textColor="#00b9ff"
         android:textSize="25sp" />
-
+    
     <TextView
         android:id="@+id/txt_tipo_gestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextView03"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="21dp"
         android:ems="10"
         android:gravity="center"
-        android:text="Ligera descripción de la gestión" />
+        android:text=""
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/txt_tiempo"
@@ -82,8 +87,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_tipo_gestion"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="Tiempo de espera"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 </RelativeLayout>

@@ -18,6 +18,7 @@ public class Segunda_ventana extends Activity
 {
 	String android_ID;
 	boolean hay_turno;
+	Button btn_aceptar1, btn_aceptar2;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -29,8 +30,8 @@ public class Segunda_ventana extends Activity
 		
 		new Tarea0().execute();
 				
-		final Button btn_aceptar1 = (Button)findViewById(R.id.btn_aceptar1);		
-		final Button btn_aceptar2 = (Button)findViewById(R.id.btn_aceptar2);
+		btn_aceptar1 = (Button)findViewById(R.id.btn_aceptar1);		
+		btn_aceptar2 = (Button)findViewById(R.id.btn_aceptar2);
 		
 		
 		//Implementamos el evento click del botón coger turno;crear entrada en el servidor

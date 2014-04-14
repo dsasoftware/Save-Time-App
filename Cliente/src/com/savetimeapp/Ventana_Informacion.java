@@ -90,7 +90,7 @@ public class Ventana_Informacion extends Activity
     		txt_turno.setText(result[0]);
     		txt_hora_reserva.setText(result[1]);
     		txt_tipo_gestion.setText(result[2]);  
-    		txt_tiempo.setText("Será atendido aproximadamente en " + result[3] + " minutos");
+    		txt_tiempo.setText("Será atendido aproximadamente en " + result[3] + " minutos.");
     	}
     }
 }

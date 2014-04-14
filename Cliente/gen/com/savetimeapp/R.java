@@ -37,31 +37,33 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int icono=0x7f020002;
     }
     public static final class id {
-        public static final int TextView01=0x7f090007;
-        public static final int TextView02=0x7f090008;
-        public static final int TextView03=0x7f09000a;
-        public static final int action_settings=0x7f090018;
-        public static final int asociacion=0x7f09000f;
-        public static final int avisos=0x7f090010;
-        public static final int ayudas=0x7f090011;
-        public static final int btn1=0x7f090016;
-        public static final int btn2=0x7f090017;
-        public static final int btn_aceptar1=0x7f090001;
-        public static final int btn_aceptar2=0x7f090003;
-        public static final int ciudad=0x7f090012;
-        public static final int coge_numero=0x7f090002;
-        public static final int deporte=0x7f090014;
+        public static final int TextView01=0x7f090009;
+        public static final int TextView02=0x7f09000a;
+        public static final int TextView03=0x7f09000c;
+        public static final int action_settings=0x7f09001a;
+        public static final int asociacion=0x7f090011;
+        public static final int avisos=0x7f090012;
+        public static final int ayudas=0x7f090013;
+        public static final int btn1=0x7f090018;
+        public static final int btn2=0x7f090019;
+        public static final int btn_aceptar1=0x7f090004;
+        public static final int btn_aceptar2=0x7f090006;
+        public static final int ciudad=0x7f090014;
+        public static final int coge_numero=0x7f090003;
+        public static final int deporte=0x7f090016;
         public static final int imageView1=0x7f090000;
-        public static final int negocios=0x7f090013;
-        public static final int radioGroup=0x7f09000e;
-        public static final int tu_numero=0x7f090005;
-        public static final int txt1=0x7f09000d;
-        public static final int txt3=0x7f090015;
-        public static final int txt_hora_reserva=0x7f090009;
-        public static final int txt_tiempo=0x7f09000c;
-        public static final int txt_tipo_gestion=0x7f09000b;
-        public static final int txt_turno=0x7f090006;
-        public static final int ver_turnos=0x7f090004;
+        public static final int negocios=0x7f090015;
+        public static final int radioGroup=0x7f090010;
+        public static final int tu_numero=0x7f090007;
+        public static final int txt1=0x7f09000f;
+        public static final int txt3=0x7f090017;
+        public static final int txt_bienve=0x7f090002;
+        public static final int txt_elija=0x7f090001;
+        public static final int txt_hora_reserva=0x7f09000b;
+        public static final int txt_tiempo=0x7f09000e;
+        public static final int txt_tipo_gestion=0x7f09000d;
+        public static final int txt_turno=0x7f090008;
+        public static final int ver_turnos=0x7f090005;
     }
     public static final class layout {
         public static final int activity_portada=0x7f030000;
@@ -111,10 +113,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_activity_ventana__informacion=0x7f06000c;
         public static final int title_activity_ventana__informacion2=0x7f060021;
         public static final int title_activity_ventana_seleccion=0x7f06001c;
+        public static final int txt_Bienvenido=0x7f060022;
         public static final int txt_Datosdelaresrva=0x7f06001e;
         public static final int txt_Horadelaresrva=0x7f06001f;
         public static final int txt_Tipogest=0x7f060020;
         public static final int txt_Tu_turno=0x7f06001d;
+        public static final int txt_elija_opcion=0x7f060023;
+        public static final int ventana_informacion=0x7f060025;
+        public static final int ventana_seleccion=0x7f060024;
     }
     public static final class style {
         /** 

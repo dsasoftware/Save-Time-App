@@ -31,15 +31,15 @@
         </activity>
         <activity
             android:name="com.savetimeapp.Ventana_seleccion"
-            android:label="@string/title_activity_ventana_seleccion" >
+            android:label="@string/ventana_seleccion" >
         </activity>
         <activity
             android:name="com.savetimeapp.Ventana_Informacion"
-            android:label="@string/title_activity_ventana__informacion" >
+            android:label="@string/ventana_informacion" >
         </activity>
         <activity
             android:name="com.savetimeapp.Ventana_Informacion2"
-            android:label="@string/title_activity_ventana__informacion2" >
+            android:label="@string/ventana_informacion" >
         </activity>
     </application>
 

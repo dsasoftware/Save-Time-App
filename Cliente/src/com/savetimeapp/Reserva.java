@@ -60,17 +60,17 @@ public class Reserva
 		
 		// Se establece el tiempo promedio de atención:
 		
-		if (tipo_gestion.equals("asociacion"))
+		if (tipo_gestion.equals("Asociacion"))
 			tiempo = TIME_ASOCIACION;
-		else if (tipo_gestion.equals("aviso"))
+		else if (tipo_gestion.equals("Aviso"))
 			tiempo = TIME_AVISO;
-		else if (tipo_gestion.equals("ayudas"))
+		else if (tipo_gestion.equals("Ayudas"))
 			tiempo = TIME_AYUDAS;
-		else if (tipo_gestion.equals("ciudad"))
+		else if (tipo_gestion.equals("Ciudad"))
 			tiempo = TIME_CIUDAD;
-		else if (tipo_gestion.equals("negocio"))
+		else if (tipo_gestion.equals("Negocio"))
 			tiempo = TIME_NEGOCIO;
-		else if (tipo_gestion.equals("deporte"))
+		else if (tipo_gestion.equals("Deporte"))
 			tiempo = TIME_DEPORTE;				
 		
 		// Captura del tiempo del sistema para saber la hora de la reserva:
@@ -85,7 +85,7 @@ public class Reserva
 		// Creamos la conexión al PHP reservar.php:
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.33/reserva.php?tiempo="+
+		HttpGet htpget = new HttpGet("http://192.168.1.35/reserva.php?tiempo="+
 		Integer.toString(tiempo)+"&hora_reserva="+hora_reserva+"&tipo_gestion="+tipo_gestion
 		+"&identidad="+identidad);
 			
@@ -117,7 +117,7 @@ public class Reserva
 		identidad = ident;
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.33/borrar.php?&identidad="+identidad);
+		HttpGet htpget = new HttpGet("http://192.168.1.35/borrar.php?&identidad="+identidad);
 		cliente.execute(htpget);	
 	}
 	
@@ -130,7 +130,7 @@ public class Reserva
 		String resultado;
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.33/hay_Turno.php?&identidad="+identidad);
+		HttpGet htpget = new HttpGet("http://192.168.1.35/hay_Turno.php?&identidad="+identidad);
 		
 		HttpResponse respuesta = cliente.execute(htpget);
 		bfr = new BufferedReader(new InputStreamReader(respuesta.getEntity().getContent()));
@@ -157,7 +157,7 @@ public class Reserva
 		String resultado;
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.33/calcular_Tiempo.php");
+		HttpGet htpget = new HttpGet("http://192.168.1.35/calcular_Tiempo.php");
 		
 		HttpResponse respuesta = cliente.execute(htpget);
 		bfr = new BufferedReader(new InputStreamReader(respuesta.getEntity().getContent()));
@@ -180,7 +180,7 @@ public class Reserva
 		identidad = ident;
 		
 		HttpClient cliente = new DefaultHttpClient();
-		HttpGet htpget = new HttpGet("http://192.168.1.33/ver_Turno.php?identidad="+identidad);
+		HttpGet htpget = new HttpGet("http://192.168.1.35/ver_Turno.php?identidad="+identidad);
 			
 		HttpResponse r = cliente.execute(htpget);
 		int status = r.getStatusLine().getStatusCode();

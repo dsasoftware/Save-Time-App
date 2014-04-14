@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class Ventana_seleccion extends Activity 
 {		
 	public final static String EXTRA_MESSAGE = "com.savetimeapp.MESSAGE";
-	String seleccion = "asociacion", android_ID;
+	String seleccion = "Asociacion", android_ID;
 	RadioGroup rg;
 	RadioButton asociacion, aviso, ayudas, ciudad, negocio, deporte;
 
@@ -54,17 +54,17 @@ public class Ventana_seleccion extends Activity
 				int id = rg.getCheckedRadioButtonId();
 																
 				if (id == asociacion.getId())
-					seleccion = "asociacion";
+					seleccion = "Asociacion";
 				else if (id == aviso.getId())
-					seleccion = "aviso";
+					seleccion = "Aviso";
 				else if (id == ayudas.getId())
-					seleccion = "ayudas";
+					seleccion = "Ayudas";
 				else if (id == ciudad.getId())
-					seleccion = "ciudad";
+					seleccion = "Ciudad";
 				else if (id == negocio.getId())
-					seleccion = "negocio";
+					seleccion = "Negocio";
 				else if (id == deporte.getId())
-					seleccion = "deporte";				
+					seleccion = "Deporte";				
 			}			
 		});
 	}	

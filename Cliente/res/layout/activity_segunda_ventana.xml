@@ -10,22 +10,35 @@
     android:paddingTop="@dimen/activity_horizontal_margin"
     tools:context=".Segunda_ventana">
 
+    <TextView
+        android:id="@+id/txt_elija"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_bienve"
+        android:layout_below="@+id/txt_bienve"
+        android:layout_marginTop="44dp"
+        android:text="@string/txt_elija_opcion"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/coge_numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_elija"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="@string/texto_reserva"
+        android:textColor="#00b9ff"
+        android:textSize="25sp" />
+
     <Button
         android:id="@+id/btn_aceptar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/coge_numero"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/boton_reservar" />
-
-    <Button
-        android:id="@+id/btn_aceptar2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_aceptar1"
-        android:layout_below="@+id/ver_turnos"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:text="@string/boton_reservar" />
 
     <TextView
@@ -34,20 +47,31 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_aceptar1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="27dp"
+        android:gravity="center"
         android:text="@string/boton_ver_turnos"
         android:textColor="#00b9ff"
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/coge_numero"
+        android:id="@+id/txt_bienve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/texto_reserva"
-        android:textColor="#00b9ff"
-        android:textSize="25sp" 
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/txt_Bienvenido"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/btn_aceptar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_aceptar1"
+        android:layout_below="@+id/ver_turnos"
+        android:layout_marginTop="29dp"
+        android:text="@string/boton_reservar" />
 
 </RelativeLayout>
